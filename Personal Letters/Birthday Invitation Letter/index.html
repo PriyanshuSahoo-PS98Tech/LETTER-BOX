@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🎉</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your birthday invitation</p>
+    </div>
+
+    <!-- Birthday Invitation Page -->
+    <div class="page birthday-card" id="birthdayCard">
+        <div class="card-background">
+            <div class="floating-balloons">
+                <div class="balloon balloon-1">🎈</div>
+                <div class="balloon balloon-2">🎈</div>
+                <div class="balloon balloon-3">🎈</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Birthday Photo Section -->
+                <div class="birthday-photo-section">
+                    <div class="photo-container">
+                        <div class="birthday-photo">🎂</div>
+                        <div class="birthday-age">25</div>
+                    </div>
+                </div>
+
+                <h1 class="invitation-title">You're Invited!</h1>
+                <div class="celebration-emoji">🎉</div>
+                
+                <div class="invitation-content">
+                    <h2>Birthday Celebration</h2>
+                    
+                    <div class="event-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Birthday Star:</span>
+                            <span class="detail-value">Sarah Johnson</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Turning:</span>
+                            <span class="detail-value">25 Years Young!</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Date:</span>
+                            <span class="detail-value">Saturday, July 15th, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Time:</span>
+                            <span class="detail-value">6:00 PM - 11:00 PM</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Venue:</span>
+                            <span class="detail-value">Starlight Banquet Hall<br>123 Celebration Avenue</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Dress Code:</span>
+                            <span class="detail-value">Smart Casual</span>
+                        </div>
+                    </div>
+
+                    <div class="special-message">
+                        "Join us for an evening filled with laughter, joy, and unforgettable memories as we celebrate another amazing year of life! Come ready to dance, laugh, and make beautiful memories together!"
+                    </div>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With love,<br>The Johnson Family</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="rsvp-section">
+                    <p class="rsvp-text">Please RSVP by January 11th, 2025</p>
+                    <div class="action-buttons">
+                        <button class="rsvp-button" onclick="handleRSVP('yes')">Count Me In! 🎉</button>
+                        <button class="maybe-button" onclick="handleRSVP('maybe')">Maybe 🤔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

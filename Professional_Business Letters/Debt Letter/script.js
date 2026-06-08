@@ -1,0 +1,36 @@
+const envelope = document.getElementById('envelope');
+const envelopeContainer = document.getElementById('envelopeContainer');
+const debtDocument = document.getElementById('debtDocument');
+
+envelope.addEventListener('click', openDebtLetter);
+
+function openDebtLetter() {
+    envelope.classList.add('envelope-opening');
+
+    setTimeout(() => {
+        envelopeContainer.classList.add('hidden');
+    }, 700);
+
+    setTimeout(() => {
+        debtDocument.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }, 900);
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        if (!debtDocument.classList.contains('show')) {
+            openDebtLetter();
+        }
+    }
+});
+
+window.addEventListener('keydown', function (event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
+        if (debtDocument.classList.contains('show')) {
+            setTimeout(() => {
+                window.print();
+            }, 100);
+        }
+    }
+});

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimate Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Professional Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal"></div>
+        </div>
+        <p class="click-instruction">Open Estimate Letter</p>
+    </div>
+
+    <!-- Estimate Letter Document -->
+    <div class="document" id="estimateDocument">
+        <div class="letter-content">
+            <div class="floating-elements">
+                <div class="professional-element element-1"></div>
+                <div class="professional-element element-2"></div>
+                <div class="professional-element element-3"></div>
+                <div class="professional-element element-4"></div>
+                <div class="professional-element element-5"></div>
+            </div>
+
+            <!-- Letter Header -->
+            <div class="letter-header">
+                <div class="sender-info">
+                    <strong>Your Full Name / Company Name</strong><br>
+                    Your Address<br>
+                    City, State, PIN Code<br>
+                    Email: your.email@example.com<br>
+                    Phone: +91 XXXXX XXXXX
+                </div>
+
+                <div class="date-section">
+                    <strong>December 15, 2024</strong>
+                </div>
+
+                <div class="receiver-info">
+                    <strong>The Client / Concerned Authority</strong><br>
+                    Client / Company Name<br>
+                    Department Name<br>
+                    Address Line<br>
+                    City, State, PIN Code
+                </div>
+            </div>
+
+            <!-- Subject Line -->
+            <div class="subject-line">
+                <h1>Subject: Submission of Estimate for Requested Work / Service</h1>
+            </div>
+
+            <!-- Salutation -->
+            <div class="salutation">
+                <p>Respected Sir/Madam,</p>
+            </div>
+
+            <!-- Letter Body -->
+            <div class="letter-body">
+                <p class="paragraph statement">
+                    I am writing this letter to submit the estimated cost for the requested work/service as discussed earlier. The estimate has been prepared based on the requirements, specifications, materials, labour, timeline, and other necessary conditions.
+                </p>
+
+                <p class="paragraph">
+                    As per your enquiry/request dated <strong>[Mention Date]</strong>, we have reviewed the scope of work and prepared the following estimate for your kind consideration. The amount mentioned below is approximate and may vary slightly depending on final requirements, site conditions, availability of materials, and any additional changes requested.
+                </p>
+
+                <div class="estimate-section">
+                    <h3>Estimate Details</h3>
+                    <table class="estimate-table">
+                        <thead>
+                            <tr>
+                                <th>Sl. No.</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Rate</th>
+                                <th>Estimated Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>[Work / Product / Service Description]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>[Work / Product / Service Description]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>[Work / Product / Service Description]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="total-box">
+                        Estimated Total Amount: ₹[Total Amount]
+                    </div>
+                </div>
+
+                <p class="paragraph">
+                    The estimate includes basic material cost, labour charges, service charges, transportation, and other standard expenses wherever applicable. Any additional work or change in specifications will be calculated separately after approval.
+                </p>
+
+                <div class="terms-section">
+                    <h3>Terms and Conditions</h3>
+                    <ul class="terms-list">
+                        <li>Estimate Reference Number: [Estimate / Quotation Number]</li>
+                        <li>Validity of Estimate: [Mention Validity Period, e.g., 15 or 30 days]</li>
+                        <li>Expected Completion Time: [Mention Timeline]</li>
+                        <li>Payment Terms: [Advance / Partial / Full Payment Details]</li>
+                        <li>Taxes and additional charges, if applicable, will be added separately</li>
+                        <li>Final billing may vary depending on approved changes or extra requirements</li>
+                    </ul>
+                </div>
+
+                <p class="paragraph">
+                    Kindly review the estimate carefully and inform us if any modification, clarification, or additional item is required. Once the estimate is approved, we will proceed with the next steps and provide the final confirmation accordingly.
+                </p>
+
+                <p class="paragraph">
+                    We assure you of quality work, timely completion, and professional service as per the agreed requirements.
+                </p>
+            </div>
+
+            <!-- Closing Section -->
+            <div class="closing-section">
+                <p class="closing-text">
+                    Thank you for giving us the opportunity to submit this estimate. We look forward to your approval and further communication.
+                </p>
+
+                <p class="closing-phrase">Yours faithfully,</p>
+                <div class="signature-space"></div>
+
+                <p class="signature-name">Your Full Name</p>
+                <div class="sender-details">
+                    Designation: [Your Designation]<br>
+                    Company Name: [Your Company Name]<br>
+                    Contact Number: +91 XXXXX XXXXX<br>
+                    Email: your.email@example.com
+                </div>
+
+                <div class="copy-section">
+                    <strong>Reference / Attachments:</strong><br>
+                    • Estimate sheet or quotation copy<br>
+                    • Work/service requirement details<br>
+                    • Material or specification list, if applicable
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

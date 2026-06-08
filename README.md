@@ -35,7 +35,7 @@
 - [Add Password Protection](#-add-password-before-opening-the-letter)
 - [Deployment](#-deployment)
 - [Future Improvements](#-future-improvements)
-- [Author](#-author)
+- [Author](https://github.com/PriyanshuSahoo-PS98Tech/LETTER-BOX#%E2%80%8D-author)
 - [License](#-license)
 - [Support](#-support-the-project)
 - [Final Message](#-final-message)

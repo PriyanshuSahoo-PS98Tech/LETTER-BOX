@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch-up Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Handlee:wght@400&family=Kalam:wght@300;400;700&family=Patrick+Hand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>💌</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open my catch-up message</p>
+    </div>
+
+    <!-- Catch-up Letter Page -->
+    <div class="page catchup-card" id="catchupCard">
+        <div class="card-background">
+            <div class="floating-connection">
+                <div class="connection-element element-1">📱</div>
+                <div class="connection-element element-2">💬</div>
+                <div class="connection-element element-3">📧</div>
+                <div class="connection-element element-4">🌐</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Connection Symbol Section -->
+                <div class="connection-symbol-section">
+                    <div class="symbol-container">
+                        <div class="connection-symbol">🔗</div>
+                        <div class="reconnect-badge">Reconnect</div>
+                    </div>
+                </div>
+
+                <h1 class="catchup-title">Long Time No See!</h1>
+                <div class="connection-emoji">☕</div>
+                
+                <div class="catchup-content">
+                    <h2>Hey There, Old Friend!</h2>
+                    
+                    <p class="catchup-text">
+                        I was just thinking about you the other day and realized it's been way too long since we last caught up! Life has this funny way of keeping us all busy, but that doesn't mean the important people in our lives aren't missed.
+                    </p>
+
+                    <p class="catchup-text">
+                        I've been meaning to reach out for ages, and today I finally decided to stop making excuses and just write you this letter. I'd love to hear what you've been up to and share some of the things that have been happening in my world too.
+                    </p>
+
+                    <div class="catchup-text highlight">
+                        "True friends are never apart, maybe in distance but never in heart. It's time we bridge that distance with some good old-fashioned catching up!"
+                    </div>
+
+                    <div class="updates-section">
+                        <h3>What's New With Me</h3>
+                        <p class="updates-text">
+                            So much has happened since we last talked! I've been keeping busy with work, finally got that promotion I was hoping for, and I've taken up hiking on weekends. Remember how we used to talk about traveling more? Well, I finally made it to that place we always said we'd visit together - it was amazing, but it would have been even better with you there. I've also been reading a lot more lately and picked up photography as a hobby.
+                        </p>
+                    </div>
+
+                    <div class="questions-section">
+                        <h3>Tell Me Everything!</h3>
+                        <ul class="questions-list">
+                            <li>How have you been feeling and what's brought you joy lately?</li>
+                            <li>Are you still working at the same place or have things changed?</li>
+                            <li>Have you picked up any new hobbies or interests?</li>
+                            <li>Did you ever follow through on that dream you mentioned?</li>
+                            <li>How's your family doing? I'd love to hear updates!</li>
+                            <li>What's the best thing that's happened to you recently?</li>
+                        </ul>
+                    </div>
+
+                    <p class="catchup-text">
+                        I really hope we can find some time to properly catch up soon. Whether it's over coffee, a phone call, or even just exchanging messages back and forth, I'd love to hear your voice or read your thoughts again. You've always been such an important part of my life, and I miss our conversations and your unique perspective on things.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Missing our chats,<br>Chris</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How would you like to reconnect?</p>
+                    <div class="action-buttons">
+                        <button class="reply-button" onclick="handleResponse('reply')">Let's Chat! 💬</button>
+                        <button class="call-button" onclick="handleResponse('call')">Let's Call! 📞</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connection Bubbles Container -->
+    <div class="bubbles-container" id="bubblesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

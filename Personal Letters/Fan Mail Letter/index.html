@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Mail Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Righteous:wght@400&family=Fredoka+One:wght@400&family=Bungee:wght@400&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>⭐</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open my fan letter</p>
+    </div>
+
+    <!-- Fan Mail Letter Page -->
+    <div class="page fanmail-card" id="fanmailCard">
+        <div class="card-background">
+            <div class="floating-stars">
+                <div class="star-element element-1">⭐</div>
+                <div class="star-element element-2">🌟</div>
+                <div class="star-element element-3">✨</div>
+                <div class="star-element element-4">💫</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Fan Symbol Section -->
+                <div class="fan-symbol-section">
+                    <div class="symbol-container">
+                        <div class="fan-symbol">🤩</div>
+                        <div class="fan-badge">Super Fan</div>
+                    </div>
+                </div>
+
+                <h1 class="fanmail-title">Dear Superstar!</h1>
+                <div class="fan-emoji">🌟</div>
+                
+                <div class="fanmail-content">
+                    <h2>From Your Biggest Fan</h2>
+                    
+                    <p class="fanmail-text">
+                        I hope this letter finds you well! I'm writing to you as one of your most devoted fans, and I simply had to tell you how much your work means to me and countless others around the world.
+                    </p>
+
+                    <p class="fanmail-text">
+                        I've been following your career for [time period], and I'm constantly amazed by your talent, dedication, and the positive impact you have on people's lives. Every performance, every project, every public appearance shows just how special and gifted you truly are.
+                    </p>
+
+                    <div class="fanmail-text highlight">
+                        "You've inspired me to chase my own dreams and never give up. Your authenticity and passion shine through in everything you do, and that's what makes you not just a star, but a role model."
+                    </div>
+
+                    <div class="admiration-section">
+                        <h3>What I Admire Most</h3>
+                        <p class="admiration-text">
+                            Beyond your incredible talent, what I admire most about you is your kindness, humility, and the way you use your platform to make a difference. You've shown that success doesn't change who you are at heart, and you continue to be genuine and relatable despite your fame. Your dedication to your craft and your fans is truly inspiring.
+                        </p>
+                    </div>
+
+                    <div class="inspiration-section">
+                        <h3>How You've Inspired Me</h3>
+                        <ul class="inspiration-list">
+                            <li>You've taught me to believe in myself and my abilities</li>
+                            <li>Your work ethic motivates me to pursue excellence</li>
+                            <li>You've shown me the importance of staying true to yourself</li>
+                            <li>Your kindness reminds me to treat others with respect</li>
+                            <li>You've inspired me to follow my passion fearlessly</li>
+                            <li>Your positive attitude helps me stay optimistic during tough times</li>
+                        </ul>
+                    </div>
+
+                    <p class="fanmail-text">
+                        Thank you for being such an incredible source of inspiration and joy. I know you must receive thousands of letters like this, but I wanted you to know that you have made a real difference in my life. Please keep being amazing, and know that you have fans all over the world who support and appreciate you!
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Your devoted fan,<br>Casey</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How does this fan letter make you feel?</p>
+                    <div class="action-buttons">
+                        <button class="starstruck-button" onclick="handleResponse('starstruck')">So Touched! 💖</button>
+                        <button class="support-button" onclick="handleResponse('support')">Thank You for Support! 🙏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shooting Stars Container -->
+    <div class="shooting-stars-container" id="shootingStarsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

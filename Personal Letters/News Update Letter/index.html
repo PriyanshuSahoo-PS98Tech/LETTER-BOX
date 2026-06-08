@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Update Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>📰</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your news update</p>
+    </div>
+
+    <!-- News Update Letter Page -->
+    <div class="page newsupdate-card" id="newsupdateCard">
+        <div class="card-background">
+            <div class="floating-info">
+                <div class="info-element element-1">📊</div>
+                <div class="info-element element-2">📈</div>
+                <div class="info-element element-3">💡</div>
+                <div class="info-element element-4">🔔</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- News Symbol Section -->
+                <div class="news-symbol-section">
+                    <div class="symbol-container">
+                        <div class="news-symbol">📰</div>
+                        <div class="update-badge">Latest</div>
+                    </div>
+                </div>
+
+                <h1 class="newsupdate-title">News Update</h1>
+                <div class="info-emoji">📢</div>
+                
+                <div class="newsupdate-content">
+                    <h2>What's New & Exciting</h2>
+                    
+                    <p class="newsupdate-text">
+                        Hello there! I hope this update finds you well and thriving. I wanted to take a moment to share some exciting news and developments that have been happening recently. There's so much to catch up on, and I couldn't wait to fill you in on all the latest happenings!
+                    </p>
+
+                    <p class="newsupdate-text">
+                        Life has been quite the adventure lately, filled with new experiences, challenges, and wonderful surprises. From personal milestones to exciting opportunities, there's been a constant stream of developments that I'm eager to share with you.
+                    </p>
+
+                    <div class="newsupdate-text highlight">
+                        "Change is the only constant in life, and I'm excited to share how these changes are shaping new and amazing possibilities for the future!"
+                    </div>
+
+                    <div class="updates-section">
+                        <h3>Recent Updates</h3>
+                        <p class="updates-text">
+                            The biggest news is that I've started a new chapter in my career! After months of planning and preparation, I've taken on a new role that's both challenging and incredibly rewarding. The learning curve has been steep, but I'm loving every moment of growth and discovery. The team is fantastic, and the projects we're working on are truly innovative.
+                        </p>
+                    </div>
+
+                    <div class="highlights-section">
+                        <h3>Key Highlights</h3>
+                        <ul class="highlights-list">
+                            <li>Moved to a beautiful new apartment with amazing city views</li>
+                            <li>Completed a certification course I've been working on for months</li>
+                            <li>Started learning a new language - it's challenging but fun!</li>
+                            <li>Joined a local hiking group and discovered amazing trails</li>
+                            <li>Planning an exciting vacation for next month</li>
+                            <li>Connected with old friends and made some wonderful new ones</li>
+                        </ul>
+                    </div>
+
+                    <p class="newsupdate-text">
+                        I'd love to hear what's new in your world too! Please don't hesitate to reach out and share your own updates. Your friendship means so much to me, and staying connected makes all these exciting changes even more meaningful. Looking forward to hearing from you soon!
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Keeping you updated,<br>Morgan</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">What would you like to know more about?</p>
+                    <div class="action-buttons">
+                        <button class="more-button" onclick="handleResponse('more')">Tell Me More! 🤔</button>
+                        <button class="thanks-button" onclick="handleResponse('thanks')">Thanks for Sharing! 😊</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Papers Container -->
+    <div class="papers-container" id="papersContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

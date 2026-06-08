@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes:wght@400&family=Satisfy:wght@400&family=Alex+Brush:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>📜</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open these precious memories</p>
+    </div>
+
+    <!-- Memory Letter Page -->
+    <div class="page memory-card" id="memoryCard">
+        <div class="card-background">
+            <div class="floating-memories">
+                <div class="memory-element element-1">📸</div>
+                <div class="memory-element element-2">🎭</div>
+                <div class="memory-element element-3">🌟</div>
+                <div class="memory-element element-4">🎪</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Memory Symbol Section -->
+                <div class="memory-symbol-section">
+                    <div class="symbol-container">
+                        <div class="memory-symbol">🏛️</div>
+                        <div class="nostalgia-badge">Timeless</div>
+                    </div>
+                </div>
+
+                <h1 class="memory-title">Dear Friend</h1>
+                <div class="nostalgia-emoji">📖</div>
+                
+                <div class="memory-content">
+                    <h2>A Journey Through Time</h2>
+                    
+                    <p class="memory-text">
+                        As I sit here surrounded by photographs and mementos, my heart fills with warmth as I remember the countless moments we've shared together. These memories, like precious gems, have shaped who I am today and continue to bring joy to my life.
+                    </p>
+
+                    <p class="memory-text">
+                        Do you remember that summer afternoon when we discovered that hidden cafe downtown? The way the sunlight filtered through the old windows, casting dancing shadows on our table as we talked for hours about our dreams and aspirations. That day feels like yesterday, yet it holds the golden glow of a treasured memory.
+                    </p>
+
+                    <div class="memory-text highlight">
+                        "Some memories are like old friends - they may fade with time, but they never truly leave us, and when we encounter them again, they fill our hearts with the same warmth they always did."
+                    </div>
+
+                    <div class="cherished-section">
+                        <h3>Cherished Moments</h3>
+                        <p class="cherished-text">
+                            Every laugh we shared, every adventure we embarked upon, every quiet moment of understanding - these experiences have woven themselves into the fabric of my being. They remind me of the beauty that exists in human connection and the power of shared experiences to create lasting bonds.
+                        </p>
+                    </div>
+
+                    <div class="moments-section">
+                        <h3>Unforgettable Memories</h3>
+                        <ul class="moments-list">
+                            <li>Our spontaneous road trip to the mountains that autumn</li>
+                            <li>The time we got caught in the rain and laughed until our sides hurt</li>
+                            <li>Late-night conversations under the stars on your rooftop</li>
+                            <li>That cooking disaster that somehow turned into the best meal ever</li>
+                            <li>The way you always knew exactly what to say when I needed comfort</li>
+                            <li>Our tradition of celebrating small victories together</li>
+                        </ul>
+                    </div>
+
+                    <p class="memory-text">
+                        These memories are more than just moments from the past - they are the foundation of our friendship and the source of my gratitude. They remind me that life's greatest treasures aren't material possessions, but the connections we make and the experiences we share with those who matter most.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With fondest memories,<br>Sarah</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">Do these memories bring a smile to your face too?</p>
+                    <div class="action-buttons">
+                        <button class="memory-button" onclick="handleResponse('memory')">Beautiful Memories! 📸</button>
+                        <button class="treasure-button" onclick="handleResponse('treasure')">Treasured Forever 🏛️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Effects Container -->
+    <div class="memories-container" id="memoriesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Kalam:wght@300;400;700&family=Patrick+Hand:wght@400&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>👫</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open my friendship letter</p>
+    </div>
+
+    <!-- Friendship Letter Page -->
+    <div class="page friendship-card" id="friendshipCard">
+        <div class="card-background">
+            <div class="floating-friendship">
+                <div class="friendship-element element-1">🌟</div>
+                <div class="friendship-element element-2">🎉</div>
+                <div class="friendship-element element-3">💫</div>
+                <div class="friendship-element element-4">✨</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Friendship Symbol Section -->
+                <div class="friendship-symbol-section">
+                    <div class="symbol-container">
+                        <div class="friendship-symbol">🤝</div>
+                        <div class="bond-badge">BFF</div>
+                    </div>
+                </div>
+
+                <h1 class="friendship-title">Dear Best Friend</h1>
+                <div class="friendship-emoji">🌈</div>
+                
+                <div class="friendship-content">
+                    <h2>A Letter to My Amazing Friend</h2>
+                    
+                    <p class="friendship-text">
+                        Hey there, my wonderful friend! I was just thinking about all the incredible moments we've shared together, and I felt compelled to write you this letter to let you know just how much your friendship means to me.
+                    </p>
+
+                    <p class="friendship-text">
+                        You know, it's rare to find someone who truly "gets" you – someone who can make you laugh until your stomach hurts, who's there to listen when you need to vent, and who celebrates your victories as if they were their own. That someone, for me, is you.
+                    </p>
+
+                    <div class="friendship-text highlight">
+                        "A true friend is someone who knows all your stories, but still loves you anyway. Thank you for being that person who makes my life brighter just by being in it."
+                    </div>
+
+                    <div class="memories-section">
+                        <h3>Our Amazing Journey</h3>
+                        <p class="memories-text">
+                            From our spontaneous adventures and inside jokes that no one else understands, to the deep conversations that lasted until 3 AM – every memory with you is a treasure. You've been my partner in crime, my voice of reason, and my constant source of laughter. Through all the ups and downs, you've remained by my side.
+                        </p>
+                    </div>
+
+                    <div class="bond-section">
+                        <h3>What Makes Our Friendship Special</h3>
+                        <ul class="bond-list">
+                            <li>You accept me completely, quirks and all</li>
+                            <li>We can be silly together without any judgment</li>
+                            <li>You're always honest with me, even when it's hard to hear</li>
+                            <li>We support each other's dreams and goals</li>
+                            <li>Distance never diminishes our connection</li>
+                            <li>You make ordinary moments feel extraordinary</li>
+                        </ul>
+                    </div>
+
+                    <p class="friendship-text">
+                        I want you to know that having you as a friend has made me a better person. Your kindness, humor, and unwavering loyalty inspire me every day. No matter where life takes us, please know that you'll always have a special place in my heart and a friend for life in me.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Your forever friend,<br>Alex</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How does this make you feel?</p>
+                    <div class="action-buttons">
+                        <button class="friendship-button" onclick="handleResponse('friendship')">Feeling Grateful! 🙏</button>
+                        <button class="memories-button" onclick="handleResponse('memories')">Let's Make More Memories! 📸</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friendship Stars Container -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes:wght@400&family=Satisfy:wght@400&family=Alex+Brush:wght@400&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🙏</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open this heartfelt gratitude</p>
+    </div>
+
+    <!-- Gratitude Letter Page -->
+    <div class="page gratitude-card" id="gratitudeCard">
+        <div class="card-background">
+            <div class="floating-gratitude">
+                <div class="gratitude-element element-1">🙏</div>
+                <div class="gratitude-element element-2">🌻</div>
+                <div class="gratitude-element element-3">💛</div>
+                <div class="gratitude-element element-4">🌟</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Gratitude Symbol Section -->
+                <div class="gratitude-symbol-section">
+                    <div class="symbol-container">
+                        <div class="gratitude-symbol">💝</div>
+                        <div class="thankful-badge">Blessed</div>
+                    </div>
+                </div>
+
+                <h1 class="gratitude-title">With Deep Gratitude</h1>
+                <div class="appreciation-emoji">🌺</div>
+                
+                <div class="gratitude-content">
+                    <h2>A Heart Full of Thanks</h2>
+                    
+                    <p class="gratitude-text">
+                        As I take this moment to reflect, my heart overflows with genuine gratitude for the countless ways you've touched my life. Your kindness, support, and presence have been a source of strength and joy that I treasure deeply. I feel incredibly blessed to have you in my life.
+                    </p>
+
+                    <p class="gratitude-text">
+                        Words often feel inadequate when trying to express the depth of appreciation I feel, but I want you to know that your generosity of spirit, your thoughtfulness, and the way you've consistently shown care and understanding have made a profound difference in my journey.
+                    </p>
+
+                    <div class="gratitude-text highlight">
+                        "Gratitude is not only the greatest of virtues but the parent of all others. In acknowledging the goodness in others, we discover the light that brightens our own path forward."
+                    </div>
+
+                    <div class="appreciation-section">
+                        <h3>My Sincere Appreciation</h3>
+                        <p class="appreciation-text">
+                            Your unwavering support during challenging times and your willingness to celebrate victories, both big and small, have meant more to me than you may ever know. The way you listen without judgment, offer guidance with wisdom, and extend kindness without expectation exemplifies the very best of human nature.
+                        </p>
+                    </div>
+
+                    <div class="thankfulness-section">
+                        <h3>What I'm Grateful For</h3>
+                        <ul class="thankfulness-list">
+                            <li>Your genuine friendship and unwavering loyalty</li>
+                            <li>The countless moments of laughter and joy we've shared</li>
+                            <li>Your wisdom and guidance during difficult decisions</li>
+                            <li>The way you believe in me even when I doubt myself</li>
+                            <li>Your generosity of time, energy, and spirit</li>
+                            <li>The positive impact you've had on my growth and happiness</li>
+                        </ul>
+                    </div>
+
+                    <p class="gratitude-text">
+                        As I continue on this journey of life, I carry with me the lessons you've taught me, the memories we've created, and the inspiration your example provides. Your influence has shaped me in ways that will last a lifetime, and for that, I am eternally grateful.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With heartfelt appreciation,<br>Emma</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How does this gratitude touch your heart?</p>
+                    <div class="action-buttons">
+                        <button class="grateful-button" onclick="handleResponse('grateful')">Deeply Touched! 💝</button>
+                        <button class="blessed-button" onclick="handleResponse('blessed')">Feeling Blessed! 🌟</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gratitude Effects Container -->
+    <div class="gratitude-effects-container" id="gratitudeEffectsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

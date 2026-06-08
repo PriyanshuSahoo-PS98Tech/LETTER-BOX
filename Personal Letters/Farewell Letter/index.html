@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Merriweather:wght@300;400;700&family=Indie+Flower:wght@400&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🍂</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open my farewell message</p>
+    </div>
+
+    <!-- Farewell Letter Page -->
+    <div class="page farewell-card" id="farewellCard">
+        <div class="card-background">
+            <div class="floating-memories">
+                <div class="memory-element element-1">📸</div>
+                <div class="memory-element element-2">🌅</div>
+                <div class="memory-element element-3">💫</div>
+                <div class="memory-element element-4">🎭</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Journey Symbol Section -->
+                <div class="journey-symbol-section">
+                    <div class="symbol-container">
+                        <div class="journey-symbol">🛤️</div>
+                        <div class="milestone-badge">Journey</div>
+                    </div>
+                </div>
+
+                <h1 class="farewell-title">Until We Meet Again</h1>
+                <div class="journey-emoji">🌈</div>
+                
+                <div class="farewell-content">
+                    <h2>A Heartfelt Goodbye</h2>
+                    
+                    <p class="farewell-text">
+                        As I sit here writing this letter, my heart is filled with a bittersweet mixture of emotions. While saying goodbye is never easy, I wanted to take a moment to express my gratitude for the incredible journey we've shared together.
+                    </p>
+
+                    <p class="farewell-text">
+                        The time we've spent together has been truly special, filled with laughter, learning, growth, and countless memories that I will treasure forever. You've been more than just a colleague, classmate, or friend – you've been a source of inspiration, support, and joy in my life.
+                    </p>
+
+                    <div class="farewell-text highlight">
+                        "Goodbyes are not forever, are not the end; it simply means I'll miss you until we meet again. Thank you for being such a wonderful part of my journey."
+                    </div>
+
+                    <div class="reflection-section">
+                        <h3>Cherished Memories</h3>
+                        <p class="reflection-text">
+                            Looking back on our time together, I'm amazed by how much we've accomplished and how much we've grown. From the challenges we've overcome to the successes we've celebrated, every moment has contributed to making this experience unforgettable. Your kindness, wisdom, and positive spirit have left an indelible mark on my heart.
+                        </p>
+                    </div>
+
+                    <div class="wishes-section">
+                        <h3>My Wishes for Your Future</h3>
+                        <ul class="wishes-list">
+                            <li>May your new path be filled with exciting opportunities</li>
+                            <li>May you find joy and fulfillment in everything you do</li>
+                            <li>May you continue to inspire others as you've inspired me</li>
+                            <li>May success follow you wherever you go</li>
+                            <li>May you always remember how amazing you are</li>
+                            <li>May our paths cross again in the future</li>
+                        </ul>
+                    </div>
+
+                    <p class="farewell-text">
+                        Though we may be parting ways for now, please know that you'll always hold a special place in my thoughts and prayers. I'm excited to see all the wonderful things you'll accomplish in your next chapter, and I hope our paths will cross again someday.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With warm regards and best wishes,<br>Taylor</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How would you like to stay in touch?</p>
+                    <div class="action-buttons">
+                        <button class="wishes-button" onclick="handleResponse('wishes')">Thank You! 🙏</button>
+                        <button class="connect-button" onclick="handleResponse('connect')">Stay Connected! 📱</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Leaves Container -->
+    <div class="leaves-container" id="leavesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

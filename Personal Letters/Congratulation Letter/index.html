@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulation Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&family=Pacifico:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🏆</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your congratulations</p>
+    </div>
+
+    <!-- Congratulation Letter Page -->
+    <div class="page congratulation-card" id="congratulationCard">
+        <div class="card-background">
+            <div class="floating-success">
+                <div class="success-element element-1">🏆</div>
+                <div class="success-element element-2">🎯</div>
+                <div class="success-element element-3">🌟</div>
+                <div class="success-element element-4">💎</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Achievement Symbol Section -->
+                <div class="achievement-symbol-section">
+                    <div class="symbol-container">
+                        <div class="achievement-symbol">🎉</div>
+                        <div class="success-badge">Winner!</div>
+                    </div>
+                </div>
+
+                <h1 class="congratulation-title">Congratulations!</h1>
+                <div class="celebration-emoji">🎊</div>
+                
+                <div class="congratulation-content">
+                    <h2>You Did It!</h2>
+                    
+                    <p class="congratulation-text">
+                        I am absolutely thrilled to congratulate you on this incredible achievement! Your hard work, dedication, and perseverance have finally paid off, and I couldn't be more proud of what you've accomplished.
+                    </p>
+
+                    <p class="congratulation-text">
+                        This success is a testament to your character, your determination, and your unwavering commitment to excellence. You've shown that with passion and persistence, any goal is achievable, and you've truly earned every bit of this recognition.
+                    </p>
+
+                    <div class="congratulation-text highlight">
+                        "Success is not just about reaching the destination, but about the courage to begin the journey and the strength to continue when things get tough. You've exemplified both beautifully!"
+                    </div>
+
+                    <div class="achievement-section">
+                        <h3>What Makes This Special</h3>
+                        <p class="achievement-text">
+                            This achievement represents so much more than just a milestone - it's proof of your incredible talent, your dedication to growth, and your ability to overcome challenges. You've set an inspiring example for everyone around you, showing that dreams really do come true when backed by hard work and determination.
+                        </p>
+                    </div>
+
+                    <div class="inspiration-section">
+                        <h3>You've Inspired Us All</h3>
+                        <ul class="inspiration-list">
+                            <li>Your persistence through challenges has been remarkable</li>
+                            <li>You've shown what's possible with dedication and focus</li>
+                            <li>Your positive attitude has lifted everyone around you</li>
+                            <li>You've turned your dreams into reality through hard work</li>
+                            <li>Your success story will motivate others to pursue their goals</li>
+                            <li>You've proven that excellence is a choice, not an accident</li>
+                        </ul>
+                    </div>
+
+                    <p class="congratulation-text">
+                        As you celebrate this well-deserved success, remember that this is just the beginning of even greater things to come. Your talent, work ethic, and determination will continue to open doors and create opportunities. Enjoy this moment - you've truly earned it!
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With admiration and pride,<br>Marcus</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How would you like to celebrate this achievement?</p>
+                    <div class="action-buttons">
+                        <button class="celebrate-button" onclick="handleResponse('celebrate')">Let's Celebrate! 🥳</button>
+                        <button class="inspire-button" onclick="handleResponse('inspire')">Share the Success 🌟</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Sparkles Container -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

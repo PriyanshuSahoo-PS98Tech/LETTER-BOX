@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Professional Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal"></div>
+        </div>
+        <p class="click-instruction">Open Order Letter</p>
+    </div>
+
+    <!-- Order Letter Document -->
+    <div class="document" id="orderDocument">
+        <div class="letter-content">
+            <div class="floating-elements">
+                <div class="professional-element element-1"></div>
+                <div class="professional-element element-2"></div>
+                <div class="professional-element element-3"></div>
+                <div class="professional-element element-4"></div>
+                <div class="professional-element element-5"></div>
+            </div>
+
+            <!-- Letter Header -->
+            <div class="letter-header">
+                <div class="sender-info">
+                    <strong>Your Full Name / Company Name</strong><br>
+                    Your Address<br>
+                    City, State, PIN Code<br>
+                    Email: your.email@example.com<br>
+                    Phone: +91 XXXXX XXXXX
+                </div>
+
+                <div class="date-section">
+                    <strong>December 15, 2024</strong>
+                </div>
+
+                <div class="receiver-info">
+                    <strong>The Sales Manager / Supplier</strong><br>
+                    Company / Vendor Name<br>
+                    Sales Department<br>
+                    Address Line<br>
+                    City, State, PIN Code
+                </div>
+            </div>
+
+            <!-- Subject Line -->
+            <div class="subject-line">
+                <h1>Subject: Placement of Order for Required Products</h1>
+            </div>
+
+            <!-- Salutation -->
+            <div class="salutation">
+                <p>Respected Sir/Madam,</p>
+            </div>
+
+            <!-- Letter Body -->
+            <div class="letter-body">
+                <p class="paragraph statement">
+                    I am writing this letter to formally place an order for the products listed below as per your catalogue/quotation. Kindly process the order at the earliest and arrange delivery according to the mentioned terms and conditions.
+                </p>
+
+                <p class="paragraph">
+                    After reviewing your product details and pricing, we are pleased to confirm our order. Please ensure that all items are supplied in proper condition, securely packed, and delivered within the agreed timeline.
+                </p>
+
+                <div class="order-section">
+                    <h3>Order Details</h3>
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Sl. No.</th>
+                                <th>Item Name</th>
+                                <th>Quantity</th>
+                                <th>Rate</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>[Product / Item Name]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>[Product / Item Name]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>[Product / Item Name]</td>
+                                <td>[Qty]</td>
+                                <td>₹[Rate]</td>
+                                <td>₹[Amount]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="paragraph">
+                    Kindly confirm the availability of the above-mentioned items and inform us if there are any changes in price, delivery schedule, or stock status before processing the order.
+                </p>
+
+                <div class="instruction-section">
+                    <h3>Delivery and Payment Instructions</h3>
+                    <ul class="instruction-list">
+                        <li>Delivery Address: [Mention Complete Delivery Address]</li>
+                        <li>Expected Delivery Date: [Mention Required Date]</li>
+                        <li>Payment Method: [Cash / UPI / Bank Transfer / Cheque]</li>
+                        <li>Billing Name: [Mention Billing Name]</li>
+                        <li>Order Reference Number: [Quotation / Catalogue / PO Number]</li>
+                        <li>Please include the invoice and warranty details with the shipment</li>
+                    </ul>
+                </div>
+
+                <p class="paragraph">
+                    We request you to ensure that the products match the specifications mentioned in your quotation or catalogue. Any damaged, defective, or incorrect product should be replaced as per standard business terms.
+                </p>
+
+                <p class="paragraph">
+                    Please acknowledge receipt of this order and send a confirmation with the expected delivery schedule, final invoice amount, and payment instructions.
+                </p>
+            </div>
+
+            <!-- Closing Section -->
+            <div class="closing-section">
+                <p class="closing-text">
+                    Thank you for your cooperation. We look forward to receiving the order confirmation and maintaining a professional business relationship with your organization.
+                </p>
+
+                <p class="closing-phrase">Yours faithfully,</p>
+                <div class="signature-space"></div>
+
+                <p class="signature-name">Your Full Name</p>
+                <div class="sender-details">
+                    Designation: [Your Designation]<br>
+                    Company Name: [Your Company Name]<br>
+                    Contact Number: +91 XXXXX XXXXX<br>
+                    Email: your.email@example.com
+                </div>
+
+                <div class="copy-section">
+                    <strong>Reference / Attachments:</strong><br>
+                    • Quotation or catalogue reference<br>
+                    • Purchase order copy, if applicable<br>
+                    • Billing and delivery details
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

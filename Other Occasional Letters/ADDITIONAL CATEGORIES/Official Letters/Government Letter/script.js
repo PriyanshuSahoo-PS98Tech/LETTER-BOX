@@ -1,0 +1,73 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const envelope = document.getElementById('envelope');
+    const envelopeContainer = document.getElementById('envelopeContainer');
+    const govDocument = document.getElementById('govDocument');
+    const sealParticleContainer = document.getElementById('sealParticleContainer');
+
+    let isOpened = false;
+
+    function openGovernmentLetter() {
+        if (isOpened) return;
+        isOpened = true;
+
+        envelope.classList.add('envelope-opening');
+
+        setTimeout(function () {
+            createSealParticles();
+        }, 300);
+
+        setTimeout(function () {
+            envelopeContainer.classList.add('hidden');
+        }, 750);
+
+        setTimeout(function () {
+            govDocument.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            createSealParticles();
+        }, 950);
+    }
+
+    function createSealParticles() {
+        const colors = ['#f59e0b', '#facc15', '#334155', '#1d4ed8', '#047857', '#ffffff'];
+        const shapes = ['', 'round', 'line'];
+
+        for (let i = 0; i < 78; i++) {
+            const particle = document.createElement('div');
+            const shape = shapes[Math.floor(Math.random() * shapes.length)];
+
+            particle.className = shape ? 'seal-particle ' + shape : 'seal-particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.animationDuration = (3 + Math.random() * 3) + 's';
+            particle.style.animationDelay = Math.random() * 0.75 + 's';
+            particle.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+
+            sealParticleContainer.appendChild(particle);
+
+            setTimeout(function () {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 7000);
+        }
+    }
+
+    envelope.addEventListener('click', openGovernmentLetter);
+
+    envelope.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openGovernmentLetter();
+        }
+    });
+
+    window.addEventListener('keydown', function (event) {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'p') {
+            if (govDocument.classList.contains('show')) {
+                setTimeout(function () {
+                    window.print();
+                }, 100);
+            }
+        }
+    });
+});

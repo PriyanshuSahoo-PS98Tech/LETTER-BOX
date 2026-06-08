@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;600&family=Pacifico:wght@400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🌟</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your warm welcome</p>
+    </div>
+
+    <!-- Welcome Letter Page -->
+    <div class="page welcome-card" id="welcomeCard">
+        <div class="card-background">
+            <div class="floating-welcome">
+                <div class="welcome-element element-1">🌟</div>
+                <div class="welcome-element element-2">🎉</div>
+                <div class="welcome-element element-3">🌈</div>
+                <div class="welcome-element element-4">✨</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Welcome Symbol Section -->
+                <div class="welcome-symbol-section">
+                    <div class="symbol-container">
+                        <div class="welcome-symbol">🤗</div>
+                        <div class="welcome-badge">Hello!</div>
+                    </div>
+                </div>
+
+                <h1 class="welcome-title">Welcome!</h1>
+                <div class="welcome-emoji">🎊</div>
+                
+                <div class="welcome-content">
+                    <h2>A Warm Welcome to You!</h2>
+                    
+                    <p class="welcome-text">
+                        We are absolutely thrilled to welcome you to our community! Your arrival brings fresh energy, new perspectives, and exciting possibilities that we can't wait to explore together.
+                    </p>
+
+                    <p class="welcome-text">
+                        Whether you're joining our team, starting as a new student, moving to our neighborhood, or becoming part of our family, know that you're not just another addition – you're a valued member who brings something special and unique to our group.
+                    </p>
+
+                    <div class="welcome-text highlight">
+                        "Every new beginning comes from some other beginning's end. We're excited to be part of your new chapter and to write amazing stories together!"
+                    </div>
+
+                    <div class="journey-section">
+                        <h3>Your Journey Starts Here</h3>
+                        <p class="journey-text">
+                            We understand that starting something new can feel both exciting and overwhelming. Please know that you're not alone in this journey. We're here to support you, guide you, and celebrate every milestone along the way. Take your time to settle in, ask questions, and don't hesitate to reach out whenever you need help or just want to chat.
+                        </p>
+                    </div>
+
+                    <div class="opportunities-section">
+                        <h3>What Awaits You</h3>
+                        <ul class="opportunities-list">
+                            <li>Opportunities to learn, grow, and discover new passions</li>
+                            <li>Connections with amazing people who share your interests</li>
+                            <li>Experiences that will shape your future in wonderful ways</li>
+                            <li>Support from a community that believes in your potential</li>
+                            <li>Adventures and memories waiting to be created</li>
+                            <li>A place where your voice matters and your ideas are valued</li>
+                        </ul>
+                    </div>
+
+                    <p class="welcome-text">
+                        We're committed to making your transition as smooth and enjoyable as possible. Your success is our success, and we're genuinely excited to see all the amazing things you'll accomplish here. Welcome aboard – let's make something incredible together!
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With warm welcomes,<br>The Welcome Committee</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How are you feeling about this new beginning?</p>
+                    <div class="action-buttons">
+                        <button class="excited-button" onclick="handleResponse('excited')">So Excited! 🎉</button>
+                        <button class="questions-button" onclick="handleResponse('questions')">Have Questions 🤔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

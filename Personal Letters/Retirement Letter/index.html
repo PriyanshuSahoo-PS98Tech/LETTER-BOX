@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🎖️</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your retirement tribute</p>
+    </div>
+
+    <!-- Retirement Letter Page -->
+    <div class="page retirement-card" id="retirementCard">
+        <div class="card-background">
+            <div class="floating-achievements">
+                <div class="achievement-element element-1">🏆</div>
+                <div class="achievement-element element-2">🌅</div>
+                <div class="achievement-element element-3">⭐</div>
+                <div class="achievement-element element-4">🎯</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Retirement Symbol Section -->
+                <div class="retirement-symbol-section">
+                    <div class="symbol-container">
+                        <div class="retirement-symbol">🌅</div>
+                        <div class="years-badge">35 Years</div>
+                    </div>
+                </div>
+
+                <h1 class="retirement-title">Happy Retirement!</h1>
+                <div class="retirement-emoji">🎉</div>
+                
+                <div class="retirement-content">
+                    <h2>Celebrating an Extraordinary Career</h2>
+                    
+                    <p class="retirement-text">
+                        As you embark on this well-deserved retirement, we want to take a moment to honor the incredible career you've built and the lasting impact you've made. Your 35 years of dedicated service have been nothing short of inspiring.
+                    </p>
+
+                    <p class="retirement-text">
+                        Throughout your career, you've been more than just a colleague – you've been a mentor, a leader, and a true professional who has touched the lives of everyone you've worked with. Your wisdom, dedication, and unwavering commitment to excellence have set a standard that will be remembered for years to come.
+                    </p>
+
+                    <div class="retirement-text highlight">
+                        "Retirement is not the end of the road; it's the beginning of the open highway. Thank you for the incredible journey we've shared, and here's to the amazing adventures that await you."
+                    </div>
+
+                    <div class="legacy-section">
+                        <h3>Your Lasting Legacy</h3>
+                        <p class="legacy-text">
+                            Your contributions have shaped our organization in countless ways. From innovative solutions to mentoring junior colleagues, from leading successful projects to building lasting relationships – your legacy is woven into the very fabric of our workplace. The knowledge you've shared, the problems you've solved, and the positive culture you've helped create will continue to benefit us long after your retirement.
+                        </p>
+                    </div>
+
+                    <div class="future-section">
+                        <h3>Wishes for Your Golden Years</h3>
+                        <ul class="future-list">
+                            <li>Time to pursue passions and hobbies you've always loved</li>
+                            <li>Opportunities to travel and explore new places</li>
+                            <li>Moments of peace and relaxation you've truly earned</li>
+                            <li>Adventures with family and cherished friends</li>
+                            <li>Health and happiness in all your endeavors</li>
+                            <li>The satisfaction of a career well-lived and completed</li>
+                        </ul>
+                    </div>
+
+                    <p class="retirement-text">
+                        While we'll miss your daily presence, expertise, and wonderful sense of humor, we're genuinely excited for this new chapter in your life. You've earned every moment of the joy and freedom that retirement brings. Thank you for your years of service, friendship, and dedication.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With deepest gratitude and best wishes,<br>Your Colleagues & Friends</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How are you feeling about this milestone?</p>
+                    <div class="action-buttons">
+                        <button class="excited-button" onclick="handleResponse('excited')">Excited for the Future! 🚀</button>
+                        <button class="grateful-button" onclick="handleResponse('grateful')">Feeling Grateful 🙏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Golden Celebration Container -->
+    <div class="celebration-container" id="celebrationContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

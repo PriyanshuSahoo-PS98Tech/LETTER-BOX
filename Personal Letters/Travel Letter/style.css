@@ -1,0 +1,631 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #36d1dc 50%, #5b86e5 75%, #00c9ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Envelope Styles */
+.envelope-container {
+    text-align: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.envelope-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+    border-radius: 8px;
+    box-shadow:
+        0 10px 30px rgba(102, 126, 234, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #0097a7;
+}
+
+.envelope-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 12px,
+            rgba(0, 151, 167, 0.1) 12px,
+            rgba(0, 151, 167, 0.1) 14px);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(145deg, #b2ebf2, #0097a7);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(0, 151, 167, 0.3);
+    z-index: 2;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(145deg, #ff6f00, #e65100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 6px 20px rgba(230, 81, 0, 0.4);
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.envelope:hover .envelope-seal {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(230, 81, 0, 0.6);
+}
+
+.click-instruction {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.95;
+    animation: pulse 2s infinite;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Envelope Animation States */
+.envelope-opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.envelope-container.hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50px);
+    pointer-events: none;
+}
+
+/* Page Container */
+.page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90%;
+    max-width: 550px;
+    height: 90%;
+    max-height: 750px;
+    background: linear-gradient(145deg, #ffffff, #f0f9ff);
+    border-radius: 25px;
+    box-shadow:
+        0 30px 60px rgba(102, 126, 234, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.page.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Travel Letter Page */
+.travel-card {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(0, 151, 167, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 111, 0, 0.1) 0%, transparent 50%),
+        linear-gradient(145deg, #ffffff, #f0f9ff);
+}
+
+.card-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Floating Travel Elements */
+.floating-travel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.travel-element {
+    position: absolute;
+    font-size: 24px;
+    animation: travelFloat 12s ease-in-out infinite;
+}
+
+.element-1 {
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+    color: #0097a7;
+}
+
+.element-2 {
+    top: 20%;
+    right: 12%;
+    animation-delay: 3s;
+    color: #ff6f00;
+}
+
+.element-3 {
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 6s;
+    color: #388e3c;
+}
+
+.element-4 {
+    top: 45%;
+    right: 8%;
+    animation-delay: 9s;
+    color: #7b1fa2;
+}
+
+/* Travel Symbol Section */
+.travel-symbol-section {
+    margin-bottom: 25px;
+    animation: slideInDown 1s ease-out 0.3s both;
+}
+
+.travel-symbol {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #0097a7;
+    box-shadow:
+        0 8px 25px rgba(0, 151, 167, 0.3),
+        0 0 0 8px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(45deg, #0097a7, #ff6f00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    animation: travelGlow 3s ease-in-out infinite;
+}
+
+.adventure-badge {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    color: white;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+    animation: bounce 2s infinite;
+}
+
+.symbol-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.travel-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #00695c;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 105, 92, 0.1);
+    animation: slideInDown 1s ease-out 0.5s both;
+}
+
+.adventure-emoji {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    animation: adventurePulse 4s ease-in-out infinite;
+}
+
+.travel-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 151, 167, 0.2);
+    animation: slideInUp 1s ease-out 0.8s both;
+    border: 1px solid rgba(0, 151, 167, 0.3);
+}
+
+.travel-content h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2rem;
+    color: #00695c;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.travel-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.travel-text.highlight {
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    border-left: 4px solid #0097a7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    color: #00695c;
+    font-weight: 500;
+}
+
+.destination-section {
+    background: rgba(255, 111, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #ff6f00;
+}
+
+.destination-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #e65100;
+    margin-bottom: 15px;
+}
+
+.destination-text {
+    color: #374151;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.adventure-section {
+    background: rgba(56, 142, 60, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #388e3c;
+}
+
+.adventure-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.adventure-list {
+    text-align: left;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.adventure-list li {
+    margin-bottom: 8px;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.adventure-list li::before {
+    content: '🌍';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.signature-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.signature {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.8rem;
+    color: #00695c;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Response Section */
+.response-section {
+    animation: slideInUp 1s ease-out 1.1s both;
+    margin-top: auto;
+}
+
+.response-text {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.adventure-button,
+.planning-button {
+    background: linear-gradient(135deg, #0097a7, #00695c);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 151, 167, 0.3);
+}
+
+.planning-button {
+    background: linear-gradient(135deg, #ff6f00, #e65100);
+    box-shadow: 0 8px 25px rgba(255, 111, 0, 0.3);
+}
+
+.adventure-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 151, 167, 0.5);
+}
+
+.planning-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 111, 0, 0.5);
+}
+
+/* Travel Clouds Animation */
+.clouds-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.travel-cloud {
+    position: absolute;
+    color: #e1f5fe;
+    animation: cloud-drift 15s linear infinite;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes travelFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes adventurePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes travelGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 25px rgba(0, 151, 167, 0.3), 0 0 0 8px rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        box-shadow: 0 8px 35px rgba(0, 151, 167, 0.6), 0 0 0 8px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes cloud-drift {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 100px));
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page {
+        width: 95%;
+        height: 95%;
+        max-height: none;
+    }
+
+    .card-background {
+        padding: 25px 20px;
+    }
+
+    .travel-title {
+        font-size: 2.6rem;
+    }
+
+    .adventure-emoji {
+        font-size: 3rem;
+    }
+
+    .envelope {
+        width: 180px;
+        height: 125px;
+    }
+
+    .travel-element {
+        font-size: 20px;
+    }
+
+    .travel-symbol {
+        width: 100px;
+        height: 100px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-title {
+        font-size: 2.2rem;
+    }
+
+    .travel-content {
+        padding: 20px;
+    }
+
+    .adventure-button,
+    .planning-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

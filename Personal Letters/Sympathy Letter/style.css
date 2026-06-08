@@ -1,0 +1,585 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #b39ddb 75%, #d1c4e9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Envelope Styles */
+.envelope-container {
+    text-align: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.03) rotate(-0.5deg);
+}
+
+.envelope-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+    box-shadow:
+        0 10px 30px rgba(144, 202, 249, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #90caf9;
+}
+
+.envelope-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 12px,
+            rgba(144, 202, 249, 0.1) 12px,
+            rgba(144, 202, 249, 0.1) 14px);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(145deg, #e9ecef, #90caf9);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(144, 202, 249, 0.3);
+    z-index: 2;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(145deg, #7986cb, #5c6bc0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 6px 20px rgba(92, 107, 192, 0.4);
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.envelope:hover .envelope-seal {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 25px rgba(92, 107, 192, 0.5);
+}
+
+.click-instruction {
+    color: #1565c0;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+    animation: gentlePulse 3s infinite;
+}
+
+/* Envelope Animation States */
+.envelope-opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.envelope-container.hidden {
+    opacity: 0;
+    transform: scale(0.9) translateY(-30px);
+    pointer-events: none;
+}
+
+/* Page Container */
+.page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90%;
+    max-width: 550px;
+    height: 90%;
+    max-height: 750px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px;
+    box-shadow:
+        0 25px 50px rgba(144, 202, 249, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.page.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Sympathy Letter Page */
+.sympathy-card {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(144, 202, 249, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(179, 157, 219, 0.08) 0%, transparent 50%),
+        linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.card-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Floating Gentle Elements */
+.floating-comfort {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.comfort-element {
+    position: absolute;
+    font-size: 20px;
+    animation: comfortFloat 8s ease-in-out infinite;
+    color: #90caf9;
+    opacity: 0.5;
+}
+
+.element-1 {
+    top: 12%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    top: 25%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+.element-3 {
+    bottom: 35%;
+    left: 10%;
+    animation-delay: 6s;
+}
+
+/* Sympathy Symbol Section */
+.sympathy-symbol-section {
+    margin-bottom: 25px;
+    animation: fadeInDown 1.5s ease-out 0.5s both;
+}
+
+.sympathy-symbol {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #90caf9;
+    box-shadow:
+        0 6px 20px rgba(144, 202, 249, 0.2),
+        0 0 0 6px rgba(255, 255, 255, 0.9);
+    background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1565c0;
+    font-size: 2.8rem;
+    animation: sympathyGlow 4s ease-in-out infinite;
+}
+
+.care-badge {
+    background: linear-gradient(135deg, #7986cb, #5c6bc0);
+    color: white;
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    box-shadow: 0 3px 12px rgba(121, 134, 203, 0.3);
+}
+
+.symbol-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sympathy-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #1565c0;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(21, 101, 192, 0.1);
+    animation: fadeInDown 1.5s ease-out 0.8s both;
+}
+
+.gentle-emoji {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    animation: gentlePulse 4s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.sympathy-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(144, 202, 249, 0.15);
+    animation: fadeInUp 1.5s ease-out 1.2s both;
+    border: 1px solid rgba(144, 202, 249, 0.3);
+}
+
+.sympathy-content h2 {
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sympathy-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #37474f;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.sympathy-text.highlight {
+    background: linear-gradient(135deg, #e8f4fd, #e1f5fe);
+    border-left: 3px solid #90caf9;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    color: #1565c0;
+    font-weight: 400;
+}
+
+.support-section {
+    background: rgba(179, 157, 219, 0.1);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    border-left: 3px solid #b39ddb;
+}
+
+.support-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #7e57c2;
+    margin-bottom: 12px;
+}
+
+.support-text {
+    color: #37474f;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.comfort-section {
+    background: rgba(144, 202, 249, 0.1);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    border-left: 3px solid #90caf9;
+}
+
+.comfort-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #1976d2;
+    margin-bottom: 12px;
+}
+
+.comfort-list {
+    text-align: left;
+    color: #37474f;
+    line-height: 1.6;
+}
+
+.comfort-list li {
+    margin-bottom: 6px;
+    list-style: none;
+    position: relative;
+    padding-left: 18px;
+}
+
+.comfort-list li::before {
+    content: '💙';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+
+.signature-section {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #1565c0;
+    margin-bottom: 8px;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Response Section */
+.response-section {
+    animation: fadeInUp 1.5s ease-out 1.5s both;
+    margin-top: auto;
+}
+
+.response-text {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comfort-button,
+.support-button {
+    background: linear-gradient(135deg, #90caf9, #64b5f6);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(144, 202, 249, 0.3);
+}
+
+.support-button {
+    background: linear-gradient(135deg, #b39ddb, #9575cd);
+    box-shadow: 0 6px 20px rgba(179, 157, 219, 0.3);
+}
+
+.comfort-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(144, 202, 249, 0.4);
+}
+
+.support-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(179, 157, 219, 0.4);
+}
+
+/* Gentle Bubbles Animation */
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.gentle-bubble {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    animation: bubble-rise 6s linear forwards;
+    opacity: 0.6;
+}
+
+/* Animations */
+@keyframes gentlePulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes comfortFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(180deg);
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sympathyGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 6px 20px rgba(144, 202, 249, 0.2), 0 0 0 6px rgba(255, 255, 255, 0.9);
+    }
+
+    50% {
+        box-shadow: 0 6px 25px rgba(144, 202, 249, 0.3), 0 0 0 6px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page {
+        width: 95%;
+        height: 95%;
+        max-height: none;
+    }
+
+    .card-background {
+        padding: 25px 20px;
+    }
+
+    .sympathy-title {
+        font-size: 2.2rem;
+    }
+
+    .gentle-emoji {
+        font-size: 2.4rem;
+    }
+
+    .envelope {
+        width: 180px;
+        height: 125px;
+    }
+
+    .comfort-element {
+        font-size: 16px;
+    }
+
+    .sympathy-symbol {
+        width: 90px;
+        height: 90px;
+        font-size: 2.4rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .sympathy-title {
+        font-size: 1.8rem;
+    }
+
+    .sympathy-content {
+        padding: 18px;
+    }
+
+    .comfort-button,
+    .support-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}

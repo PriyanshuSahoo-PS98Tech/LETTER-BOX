@@ -1,0 +1,608 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #81c784 0%, #a5d6a7 25%, #c8e6c9 50%, #e8f5e8 75%, #f1f8e9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Envelope Styles */
+.envelope-container {
+    text-align: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.03) rotate(-0.5deg);
+}
+
+.envelope-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #e8f5e8, #c8e6c9);
+    border-radius: 8px;
+    box-shadow:
+        0 10px 30px rgba(129, 199, 132, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #81c784;
+}
+
+.envelope-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent,
+            transparent 12px,
+            rgba(129, 199, 132, 0.1) 12px,
+            rgba(129, 199, 132, 0.1) 14px);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(145deg, #c8e6c9, #81c784);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(129, 199, 132, 0.3);
+    z-index: 2;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(145deg, #42a5f5, #1976d2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.envelope:hover .envelope-seal {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.5);
+}
+
+.click-instruction {
+    color: #2e7d32;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+    animation: pulse 3s infinite;
+}
+
+/* Envelope Animation States */
+.envelope-opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.envelope-container.hidden {
+    opacity: 0;
+    transform: scale(0.9) translateY(-30px);
+    pointer-events: none;
+}
+
+/* Page Container */
+.page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90%;
+    max-width: 550px;
+    height: 90%;
+    max-height: 750px;
+    background: linear-gradient(145deg, #ffffff, #f8fff8);
+    border-radius: 20px;
+    box-shadow:
+        0 25px 50px rgba(129, 199, 132, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.page.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Reconciliation Letter Page */
+.reconciliation-card {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(129, 199, 132, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(66, 165, 245, 0.08) 0%, transparent 50%),
+        linear-gradient(145deg, #ffffff, #f8fff8);
+}
+
+.card-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Floating Healing Elements */
+.floating-healing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.healing-element {
+    position: absolute;
+    font-size: 20px;
+    animation: healingFloat 9s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.element-1 {
+    top: 12%;
+    left: 8%;
+    animation-delay: 0s;
+    color: #81c784;
+}
+
+.element-2 {
+    top: 25%;
+    right: 12%;
+    animation-delay: 3s;
+    color: #42a5f5;
+}
+
+.element-3 {
+    bottom: 35%;
+    left: 10%;
+    animation-delay: 6s;
+    color: #66bb6a;
+}
+
+.element-4 {
+    top: 50%;
+    right: 8%;
+    animation-delay: 9s;
+    color: #4fc3f7;
+}
+
+/* Reconciliation Symbol Section */
+.reconciliation-symbol-section {
+    margin-bottom: 25px;
+    animation: fadeInDown 1.5s ease-out 0.5s both;
+}
+
+.reconciliation-symbol {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #66bb6a;
+    box-shadow:
+        0 6px 20px rgba(102, 187, 106, 0.3),
+        0 0 0 6px rgba(255, 255, 255, 0.9);
+    background: linear-gradient(45deg, #81c784, #42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.8rem;
+    animation: reconciliationGlow 4s ease-in-out infinite;
+}
+
+.peace-badge {
+    background: linear-gradient(135deg, #42a5f5, #1976d2);
+    color: white;
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    box-shadow: 0 3px 12px rgba(25, 118, 210, 0.3);
+}
+
+.symbol-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reconciliation-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(46, 125, 50, 0.1);
+    animation: fadeInDown 1.5s ease-out 0.8s both;
+}
+
+.peaceful-emoji {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    animation: gentlePulse 4s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+.reconciliation-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(102, 187, 106, 0.15);
+    animation: fadeInUp 1.5s ease-out 1.2s both;
+    border: 1px solid rgba(129, 199, 132, 0.3);
+}
+
+.reconciliation-content h2 {
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.reconciliation-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #374151;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.reconciliation-text.highlight {
+    background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+    border-left: 3px solid #66bb6a;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    color: #2e7d32;
+    font-weight: 400;
+}
+
+.healing-section {
+    background: rgba(66, 165, 245, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    border-left: 3px solid #42a5f5;
+}
+
+.healing-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #1976d2;
+    margin-bottom: 12px;
+}
+
+.healing-text {
+    color: #374151;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.commitment-section {
+    background: rgba(102, 187, 106, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    border-left: 3px solid #66bb6a;
+}
+
+.commitment-section h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #388e3c;
+    margin-bottom: 12px;
+}
+
+.commitment-list {
+    text-align: left;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.commitment-list li {
+    margin-bottom: 6px;
+    list-style: none;
+    position: relative;
+    padding-left: 18px;
+}
+
+.commitment-list li::before {
+    content: '🤝';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+
+.signature-section {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Response Section */
+.response-section {
+    animation: fadeInUp 1.5s ease-out 1.5s both;
+    margin-top: auto;
+}
+
+.response-text {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.accept-button,
+.consider-button {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(102, 187, 106, 0.3);
+}
+
+.consider-button {
+    background: linear-gradient(135deg, #42a5f5, #1976d2);
+    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.3);
+}
+
+.accept-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 187, 106, 0.4);
+}
+
+.consider-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 165, 245, 0.4);
+}
+
+/* Peaceful Particles Animation */
+.peace-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.peace-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #81c784;
+    border-radius: 50%;
+    animation: peace-drift 7s linear forwards;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes healingFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+@keyframes gentlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.03);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes reconciliationGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 6px 20px rgba(102, 187, 106, 0.3), 0 0 0 6px rgba(255, 255, 255, 0.9);
+    }
+
+    50% {
+        box-shadow: 0 6px 25px rgba(102, 187, 106, 0.4), 0 0 0 6px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes peace-drift {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(30px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page {
+        width: 95%;
+        height: 95%;
+        max-height: none;
+    }
+
+    .card-background {
+        padding: 25px 20px;
+    }
+
+    .reconciliation-title {
+        font-size: 2.2rem;
+    }
+
+    .peaceful-emoji {
+        font-size: 2.4rem;
+    }
+
+    .envelope {
+        width: 180px;
+        height: 125px;
+    }
+
+    .healing-element {
+        font-size: 16px;
+    }
+
+    .reconciliation-symbol {
+        width: 90px;
+        height: 90px;
+        font-size: 2.4rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .reconciliation-title {
+        font-size: 1.8rem;
+    }
+
+    .reconciliation-content {
+        padding: 18px;
+    }
+
+    .accept-button,
+    .consider-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}

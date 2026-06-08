@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Roboto+Slab:wght@300;400;600&family=Kaushan+Script:wght@400&family=Cabin:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>✈️</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your travel adventure</p>
+    </div>
+
+    <!-- Travel Letter Page -->
+    <div class="page travel-card" id="travelCard">
+        <div class="card-background">
+            <div class="floating-travel">
+                <div class="travel-element element-1">✈️</div>
+                <div class="travel-element element-2">🗺️</div>
+                <div class="travel-element element-3">🏔️</div>
+                <div class="travel-element element-4">🌴</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Travel Symbol Section -->
+                <div class="travel-symbol-section">
+                    <div class="symbol-container">
+                        <div class="travel-symbol">🌍</div>
+                        <div class="adventure-badge">Explorer</div>
+                    </div>
+                </div>
+
+                <h1 class="travel-title">Adventure Awaits!</h1>
+                <div class="adventure-emoji">🗺️</div>
+                
+                <div class="travel-content">
+                    <h2>Join Me on an Epic Journey</h2>
+                    
+                    <p class="travel-text">
+                        I hope this letter finds you well and filled with wanderlust! I'm writing to share some incredible travel plans with you and extend a heartfelt invitation to join me on what promises to be an unforgettable adventure.
+                    </p>
+
+                    <p class="travel-text">
+                        There's something magical about exploring new places, experiencing different cultures, and creating memories that last a lifetime. The world is full of breathtaking destinations waiting to be discovered, and I can't think of anyone I'd rather explore them with than you.
+                    </p>
+
+                    <div class="travel-text highlight">
+                        "Travel makes one modest. You see what a tiny place you occupy in the world. But oh, what amazing experiences await when you step outside your comfort zone!"
+                    </div>
+
+                    <div class="destination-section">
+                        <h3>Our Dream Destination</h3>
+                        <p class="destination-text">
+                            I've been researching an incredible destination that offers the perfect blend of adventure, culture, and natural beauty. Imagine waking up to stunning mountain views, exploring ancient markets filled with local treasures, tasting authentic cuisine that tells the story of the land, and meeting wonderful people who share their stories and traditions with open hearts.
+                        </p>
+                    </div>
+
+                    <div class="adventure-section">
+                        <h3>Adventures We Could Experience</h3>
+                        <ul class="adventure-list">
+                            <li>Exploring hidden gems and off-the-beaten-path locations</li>
+                            <li>Immersing ourselves in local culture and traditions</li>
+                            <li>Trying authentic cuisine and local delicacies</li>
+                            <li>Capturing breathtaking photographs and memories</li>
+                            <li>Meeting fascinating people and hearing their stories</li>
+                            <li>Creating inside jokes and shared experiences</li>
+                        </ul>
+                    </div>
+
+                    <p class="travel-text">
+                        I believe that the best journeys are the ones shared with amazing companions, and your sense of adventure and zest for life would make this trip absolutely perfect. Whether we're navigating bustling city streets, hiking scenic trails, or simply sitting together watching a sunset, every moment would be enriched by your presence.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Ready for adventure,<br>Maya</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">Are you ready to embark on this adventure?</p>
+                    <div class="action-buttons">
+                        <button class="adventure-button" onclick="handleResponse('adventure')">Count Me In! 🎒</button>
+                        <button class="planning-button" onclick="handleResponse('planning')">Let's Plan This! 📋</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Travel Clouds Container -->
+    <div class="clouds-container" id="cloudsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

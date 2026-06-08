@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen Pal Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Kalam:wght@300;400;700&family=Caveat:wght@400;600&family=Patrick+Hand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>✈️</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your pen pal letter</p>
+    </div>
+
+    <!-- Pen Pal Letter Page -->
+    <div class="page penpal-card" id="penpalCard">
+        <div class="card-background">
+            <div class="floating-travel">
+                <div class="travel-element element-1">🌍</div>
+                <div class="travel-element element-2">📮</div>
+                <div class="travel-element element-3">✈️</div>
+                <div class="travel-element element-4">🗺️</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Pen Pal Symbol Section -->
+                <div class="penpal-symbol-section">
+                    <div class="symbol-container">
+                        <div class="penpal-symbol">🌍</div>
+                        <div class="connection-badge">Global</div>
+                    </div>
+                </div>
+
+                <h1 class="penpal-title">Greetings from Afar!</h1>
+                <div class="travel-emoji">📮</div>
+                
+                <div class="penpal-content">
+                    <h2>Hello My Dear Pen Pal!</h2>
+                    
+                    <p class="penpal-text">
+                        I hope this letter finds you in good health and high spirits! It feels wonderful to be writing to you again, knowing that despite the miles between us, we can share our thoughts, experiences, and cultures through these heartfelt exchanges.
+                    </p>
+
+                    <p class="penpal-text">
+                        There's something truly magical about pen pal friendships – the anticipation of receiving a letter, the joy of learning about life in a different part of the world, and the beautiful connection that transcends geographical boundaries. Your letters always bring such brightness to my day!
+                    </p>
+
+                    <div class="penpal-text highlight">
+                        "Distance means nothing when someone means everything. Through our letters, we've built a bridge across continents, connecting hearts and minds in the most beautiful way."
+                    </div>
+
+                    <div class="culture-section">
+                        <h3>Life in My Corner of the World</h3>
+                        <p class="culture-text">
+                            Here in my city, spring has finally arrived, and the cherry blossoms are in full bloom! The local festivals have begun, and the streets are filled with music, laughter, and the aroma of traditional foods. I wish you could experience the vibrant colors and joyful atmosphere – I've enclosed some photos to share a glimpse of this beautiful season with you.
+                        </p>
+                    </div>
+
+                    <div class="interests-section">
+                        <h3>Things I'd Love to Share With You</h3>
+                        <ul class="interests-list">
+                            <li>A new book I've discovered that I think you'd love</li>
+                            <li>The recipe for my grandmother's famous cookies</li>
+                            <li>Photos from my recent hiking adventure in the mountains</li>
+                            <li>Local music that captures the spirit of my homeland</li>
+                            <li>Stories from our recent cultural celebration</li>
+                            <li>Questions about your traditions and daily life</li>
+                        </ul>
+                    </div>
+
+                    <p class="penpal-text">
+                        I'm always eager to hear about your adventures, your culture, and your daily experiences. How are things in your part of the world? What new discoveries have you made? What stories do you have to share? Please tell me everything – I love learning about life through your eyes!
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With warm regards across the miles,<br>Sofia</div>
+                        <div class="location">Writing from Barcelona, Spain</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How would you like to respond?</p>
+                    <div class="action-buttons">
+                        <button class="write-button" onclick="handleResponse('write')">Write Back! ✍️</button>
+                        <button class="connect-button" onclick="handleResponse('connect')">Share Culture! 🌏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paper Planes Container -->
+    <div class="planes-container" id="planesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

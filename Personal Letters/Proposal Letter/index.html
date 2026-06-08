@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Proposal Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>💝</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your heart's message</p>
+    </div>
+
+    <!-- Proposal Letter Page -->
+    <div class="page proposal-card" id="proposalCard">
+        <div class="card-background">
+            <div class="floating-hearts">
+                <div class="heart heart-1">💕</div>
+                <div class="heart heart-2">💖</div>
+                <div class="heart heart-3">💝</div>
+            </div>
+            
+            <div class="card-content">
+                <h1 class="proposal-title">Will You Marry Me?</h1>
+                <div class="romantic-icon">💍</div>
+                
+                <div class="proposal-content">
+                    <h2>My Dearest Love</h2>
+                    <p class="proposal-text">
+                        From the moment I first saw you, I knew my life had changed forever. Your smile brightened my darkest days, your laughter became my favorite melody, and your love transformed me into the person I always hoped to become.
+                    </p>
+                    <p class="proposal-text">
+                        Every sunrise with you feels like a gift, every conversation a treasure, and every moment together a step closer to our shared dreams. You've shown me what true love means – patient, kind, generous, and unconditional.
+                    </p>
+                    <p class="proposal-text italic">
+                        "I want to wake up next to you every morning, share every sunset, and build a beautiful life together filled with love, laughter, and endless adventures."
+                    </p>
+                    <p class="proposal-text">
+                        So here I am, with all my heart exposed, asking you the most important question of my life: Will you do me the incredible honor of becoming my wife/husband? Will you take this journey of love with me, for all the days of our lives?
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Forever yours,<br>Alex</div>
+                        <div class="date">December 14th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">What does your heart say?</p>
+                    <div class="action-buttons">
+                        <button class="yes-button" onclick="handleResponse('yes')">Yes! 💕</button>
+                        <button class="no-button" onclick="handleResponse('no')">I need time</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rose Petals Container -->
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

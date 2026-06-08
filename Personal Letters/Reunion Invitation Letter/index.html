@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion Invitation Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Merriweather:wght@300;400;700&family=Satisfy:wght@400&family=Lobster:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🎓</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open your reunion invitation</p>
+    </div>
+
+    <!-- Reunion Invitation Page -->
+    <div class="page reunion-card" id="reunionCard">
+        <div class="card-background">
+            <div class="floating-memories">
+                <div class="memory-element element-1">📚</div>
+                <div class="memory-element element-2">🎉</div>
+                <div class="memory-element element-3">👥</div>
+                <div class="memory-element element-4">💫</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Reunion Symbol Section -->
+                <div class="reunion-symbol-section">
+                    <div class="symbol-container">
+                        <div class="reunion-symbol">🎓</div>
+                        <div class="reunion-badge">Reunion</div>
+                    </div>
+                </div>
+
+                <h1 class="reunion-title">Class Reunion Invitation</h1>
+                <div class="nostalgia-emoji">✨</div>
+                
+                <div class="reunion-content">
+                    <h2>Come Relive the Magic!</h2>
+                    
+                    <p class="reunion-text">
+                        It's hard to believe, but it's been 10 amazing years since we graduated together! The time has come to reconnect, reminisce, and celebrate the incredible journey we've all been on since we walked across that stage.
+                    </p>
+
+                    <p class="reunion-text">
+                        We're excited to invite you to our Class of 2014 Reunion, where we'll gather to share stories, catch up on life's adventures, and create new memories together. Whether you've stayed in touch with everyone or haven't seen your classmates in years, this is the perfect opportunity to reconnect with old friends and celebrate how far we've all come.
+                    </p>
+
+                    <div class="reunion-text highlight">
+                        "Time may have changed us, but the bonds we formed and the memories we created will always connect us. Come celebrate the past, present, and future with your fellow classmates!"
+                    </div>
+
+                    <div class="reunion-details-section">
+                        <h3>Reunion Details</h3>
+                        <div class="details-grid">
+                            <div class="detail-label">Event:</div>
+                            <div class="detail-value">Class of 2014 - 10 Year Reunion</div>
+                            
+                            <div class="detail-label">Date:</div>
+                            <div class="detail-value">Saturday, June 15th, 2025</div>
+                            
+                            <div class="detail-label">Time:</div>
+                            <div class="detail-value">6:00 PM - 12:00 AM</div>
+                            
+                            <div class="detail-label">Venue:</div>
+                            <div class="detail-value">Grand Ballroom at Riverside Hotel<br>789 Memory Lane</div>
+                            
+                            <div class="detail-label">Dress Code:</div>
+                            <div class="detail-value">Semi-Formal</div>
+                            
+                            <div class="detail-label">Cost:</div>
+                            <div class="detail-value">$75 per person (includes dinner & drinks)</div>
+                        </div>
+                    </div>
+
+                    <div class="activities-section">
+                        <h3>What to Expect</h3>
+                        <ul class="activities-list">
+                            <li>Welcome cocktail hour and mingling</li>
+                            <li>Delicious dinner with nostalgic playlist</li>
+                            <li>Memory lane photo slideshow presentation</li>
+                            <li>Awards ceremony (Most Traveled, Biggest Family, etc.)</li>
+                            <li>Dancing to hits from our high school years</li>
+                            <li>Photo booth with props and yearbook themes</li>
+                        </ul>
+                    </div>
+
+                    <p class="reunion-text">
+                        We know life gets busy, but we hope you'll make time for this special celebration. It wouldn't be the same without you there! Please RSVP by May 1st so we can get an accurate headcount for dinner and seating arrangements.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">Hope to see you there!<br>The Reunion Planning Committee</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">Will we see you at the reunion?</p>
+                    <div class="action-buttons">
+                        <button class="attend-button" onclick="handleResponse('attend')">Count Me In! 🎉</button>
+                        <button class="maybe-button" onclick="handleResponse('maybe')">Still Deciding 🤔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Bubbles Container -->
+    <div class="bubbles-container" id="bubblesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry/Apology Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Source+Serif+Pro:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>💔</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open my heartfelt apology</p>
+    </div>
+
+    <!-- Apology Letter Page -->
+    <div class="page apology-card" id="apologyCard">
+        <div class="card-background">
+            <div class="floating-elements">
+                <div class="gentle-element element-1">🕊️</div>
+                <div class="gentle-element element-2">🤍</div>
+                <div class="gentle-element element-3">🙏</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Apology Symbol Section -->
+                <div class="apology-symbol-section">
+                    <div class="symbol-container">
+                        <div class="apology-symbol">🙏</div>
+                        <div class="sincerity-badge">Sincere</div>
+                    </div>
+                </div>
+
+                <h1 class="apology-title">I'm Truly Sorry</h1>
+                <div class="apology-emoji">💙</div>
+                
+                <div class="apology-content">
+                    <h2>My Heartfelt Apology</h2>
+                    
+                    <p class="apology-text">
+                        I am writing this letter with a heavy heart, knowing that my actions have caused you pain and disappointment. There are no words that can fully express how deeply sorry I am for what I did and the hurt I have caused you.
+                    </p>
+
+                    <p class="apology-text">
+                        I understand that saying "I'm sorry" isn't enough to undo the damage, but I want you to know that I am genuinely remorseful for my behavior. I have taken time to reflect on my actions, and I realize how wrong I was.
+                    </p>
+
+                    <div class="apology-text highlight">
+                        "I take full responsibility for my actions and the pain they have caused. There is no excuse for what I did, and I am committed to making things right."
+                    </div>
+
+                    <div class="accountability-section">
+                        <h3>I Acknowledge That</h3>
+                        <p class="accountability-text">
+                            My actions were thoughtless and hurtful. I failed to consider how my behavior would affect you, and I violated the trust you placed in me. I understand that my choices were selfish and that I let you down when you needed me most. I accept full responsibility for the consequences of my actions.
+                        </p>
+                    </div>
+
+                    <div class="promise-section">
+                        <h3>My Promise to You</h3>
+                        <ul class="promise-list">
+                            <li>I will work on understanding why I made these choices</li>
+                            <li>I will take concrete steps to ensure this never happens again</li>
+                            <li>I will be more mindful of how my actions affect others</li>
+                            <li>I will earn back your trust through consistent actions, not just words</li>
+                            <li>I will give you the space you need to heal</li>
+                            <li>I will be patient with your forgiveness process</li>
+                        </ul>
+                    </div>
+
+                    <p class="apology-text">
+                        I know that rebuilding trust takes time, and I am prepared to do whatever it takes to make amends. Your friendship/relationship means the world to me, and I am committed to becoming a better person because of this experience.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With sincere regret,<br>Jordan</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">How do you feel about this apology?</p>
+                    <div class="action-buttons">
+                        <button class="forgive-button" onclick="handleResponse('forgive')">I Forgive You 🤝</button>
+                        <button class="time-button" onclick="handleResponse('time')">I Need Time 🕰️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gentle Particles Container -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

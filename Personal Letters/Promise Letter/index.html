@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes:wght@400&family=Satisfy:wght@400&family=Alex+Brush:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-seal">
+                <span>🤝</span>
+            </div>
+        </div>
+        <p class="click-instruction">Open this sacred promise</p>
+    </div>
+
+    <!-- Promise Letter Page -->
+    <div class="page promise-card" id="promiseCard">
+        <div class="card-background">
+            <div class="floating-promises">
+                <div class="promise-element element-1">🤝</div>
+                <div class="promise-element element-2">💍</div>
+                <div class="promise-element element-3">🤞</div>
+                <div class="promise-element element-4">🌟</div>
+            </div>
+            
+            <div class="card-content">
+                <!-- Promise Symbol Section -->
+                <div class="promise-symbol-section">
+                    <div class="symbol-container">
+                        <div class="promise-symbol">🤞</div>
+                        <div class="commitment-badge">Sacred</div>
+                    </div>
+                </div>
+
+                <h1 class="promise-title">My Sacred Promise</h1>
+                <div class="commitment-emoji">🤝</div>
+                
+                <div class="promise-content">
+                    <h2>Words of Commitment</h2>
+                    
+                    <p class="promise-text">
+                        Today, I make this solemn promise to you - a commitment that comes not from obligation, but from the depths of my heart and the unwavering strength of my character. These words are not spoken lightly, but with the full weight of my integrity and the sincere intention to honor them completely.
+                    </p>
+
+                    <p class="promise-text">
+                        A promise is more than mere words; it is a sacred bond that connects souls across time and circumstance. It represents trust given and received, hope shared and nurtured, and a commitment to stand firm regardless of the challenges that may come our way.
+                    </p>
+
+                    <div class="promise-text highlight">
+                        "A promise is a bridge between what is and what could be, built not with stone and steel, but with trust, dedication, and the unshakeable resolve to honor one's word above all else."
+                    </div>
+
+                    <div class="vow-section">
+                        <h3>My Solemn Vow</h3>
+                        <p class="vow-text">
+                            I promise to be unwavering in my commitment to you and to the values we share. Through moments of joy and times of challenge, through seasons of abundance and periods of struggle, my dedication will remain constant and my word will be your anchor of certainty.
+                        </p>
+                    </div>
+
+                    <div class="commitment-section">
+                        <h3>My Pledged Commitments</h3>
+                        <ul class="commitment-list">
+                            <li>To honor my word with absolute integrity and consistency</li>
+                            <li>To stand by you through every triumph and challenge</li>
+                            <li>To communicate with honesty, transparency, and respect</li>
+                            <li>To support your dreams and aspirations wholeheartedly</li>
+                            <li>To maintain trust as the foundation of our relationship</li>
+                            <li>To grow together while respecting our individual journeys</li>
+                        </ul>
+                    </div>
+
+                    <p class="promise-text">
+                        This promise is sealed not with wax or signature, but with the sincerity of my heart and the strength of my character. May these words serve as a constant reminder of my commitment to you and the sacred trust we share. I pledge to honor this promise with every action, every decision, and every moment we share together.
+                    </p>
+                    
+                    <div class="signature-section">
+                        <div class="signature">With unwavering commitment,<br>Jordan</div>
+                        <div class="date">December 15th, 2024</div>
+                    </div>
+                </div>
+
+                <div class="response-section">
+                    <p class="response-text">Do you accept this sacred promise?</p>
+                    <div class="action-buttons">
+                        <button class="trust-button" onclick="handleResponse('trust')">I Trust You! 🤝</button>
+                        <button class="commitment-button" onclick="handleResponse('commitment')">Promise Accepted! 💍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promise Effects Container -->
+    <div class="promises-container" id="promisesContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
